@@ -1,4 +1,5 @@
 import { defineStore } from "pinia"
+import { getRandomColor } from '../utils/colors';
 
 interface LineChart {
   labels: string[]
@@ -38,7 +39,7 @@ export const useStore = defineStore("main", {
               labels: [],
               datasets: [{
                 label: 'Процент общего числа',
-                backgroundColor: 'green',
+                backgroundColor: 'rgb(229, 25, 100)',
                 data: [],
               }],
             }
@@ -73,9 +74,11 @@ export const useStore = defineStore("main", {
                 data: [],
               }],
             }
-            data.forEach((item) => {
+            data.forEach((item, i) => {
               resp.labels.push(item['Группа'])
-              resp.datasets[0].backgroundColor.push('red')
+              // Исключительно секретным образом генерирую цевета для диаграммы
+              const color = `rgb(${255 / 100 * item['Доля'] * (i + 1)}, ${255 / 100 * item['Доля'] / (i + 1)}, 100)`
+              resp.datasets[0].backgroundColor.push(color)
               resp.datasets[0].data.push(item['Доля'])
             })
             return resp

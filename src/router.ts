@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import App from './App'
-import line from './pages/line'
-import pie from './pages/pie'
+import line from './pages/line/line'
+import pie from './pages/pie/pie'
 import home from './pages/home/home';
 
 export default createRouter({
