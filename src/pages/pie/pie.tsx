@@ -1,22 +1,22 @@
-import { computed, defineComponent, onMounted, ref } from 'vue';
-import { useStore } from '../../store/main';
+import { defineComponent, onMounted } from 'vue'
+import { useStore } from '../../store/main'
 import { Pie } from 'vue-chartjs'
 import {
   Chart as ChartJS,
   Tooltip,
   Legend,
-  ArcElement,
-} from 'chart.js';
-import styles from './pie.module.css';
+  ArcElement
+} from 'chart.js'
+import styles from './pie.module.css'
 
 ChartJS.register(ArcElement, Tooltip, Legend)
 
 export default defineComponent({
   name: 'Pie',
   components: {
-    Pie,
+    Pie
   },
-  setup() {
+  setup () {
     const store = useStore()
 
     onMounted(async () => {
@@ -32,6 +32,6 @@ export default defineComponent({
           />}
         </div>
       </>
-    );
-  },
-});
+    )
+  }
+})

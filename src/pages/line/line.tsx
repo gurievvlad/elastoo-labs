@@ -1,5 +1,5 @@
-import { defineComponent, onMounted } from 'vue';
-import { useStore } from '../../store/main';
+import { defineComponent, onMounted } from 'vue'
+import { useStore } from '../../store/main'
 import { Line } from 'vue-chartjs'
 import {
   Chart as ChartJS,
@@ -9,9 +9,9 @@ import {
   CategoryScale,
   LinearScale,
   PointElement,
-  LineElement,
-} from 'chart.js';
-import zoomPlugin from 'chartjs-plugin-zoom';
+  LineElement
+} from 'chart.js'
+import zoomPlugin from 'chartjs-plugin-zoom'
 
 import styles from './line.module.css'
 
@@ -23,15 +23,15 @@ ChartJS.register(
   Title,
   Tooltip,
   Legend,
-  zoomPlugin,
+  zoomPlugin
 )
 
 export default defineComponent({
   name: 'Line',
   components: {
-    Line,
+    Line
   },
-  setup() {
+  setup () {
     const store = useStore()
 
     onMounted(async () => {
@@ -49,12 +49,12 @@ export default defineComponent({
                 zoom: {
                   zoom: {
                     wheel: {
-                      enabled: true,
+                      enabled: true
                     },
                     pinch: {
                       enabled: true
                     },
-                    mode: 'x',
+                    mode: 'x'
                   }
                 }
               }
@@ -63,6 +63,6 @@ export default defineComponent({
           />}
         </div>
       </>
-    );
-  },
-});
+    )
+  }
+})

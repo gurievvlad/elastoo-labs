@@ -1,4 +1,4 @@
-import { defineComponent } from 'vue';
+import { defineComponent } from 'vue'
 import styles from './button.module.css'
 
 export default defineComponent({
@@ -7,25 +7,25 @@ export default defineComponent({
     type: {
       type: String,
       default: 'button',
-      validator(value) {
+      validator (value) {
         return ['button', 'reset', 'submit'].includes(value)
-      },
+      }
     },
     variant: {
       type: String,
       default: 'primary',
-      validator(value) {
+      validator (value) {
         return ['primary', 'secondary'].includes(value)
-      },
-    },
+      }
+    }
   },
-  setup(props, ctx) {
+  setup (props, ctx) {
     return () => (
       <button
         type={props.type}
         class={[
           styles.button,
-          styles[props.variant],
+          styles[props.variant]
         ]}
         onclick={(e) => ctx.emit('click', e)}
       >

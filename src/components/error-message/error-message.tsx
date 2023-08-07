@@ -1,5 +1,5 @@
-import { defineComponent } from 'vue';
-import Button from '../button/button';
+import { defineComponent } from 'vue'
+import Button from '../button/button'
 import styles from './error-message.module.css'
 
 export default defineComponent({
@@ -7,10 +7,10 @@ export default defineComponent({
   props: {
     message: {
       type: String,
-      required: true,
-    },
+      required: true
+    }
   },
-  setup(props, { emit }) {
+  setup (props, { emit }) {
     return () => (
       <div class={styles.errorMessage}>
         <h3 class={styles.message}>{props.message}</h3>

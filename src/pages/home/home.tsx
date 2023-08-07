@@ -1,12 +1,12 @@
-import { defineComponent } from 'vue';
-import Button from '../../components/button/button';
+import { defineComponent } from 'vue'
+import Button from '../../components/button/button'
 
 import styles from './home.module.css'
-import router from '../../router';
+import router from '../../router'
 
 export default defineComponent({
   name: 'Home',
-  setup() {
+  setup () {
     return () => (
       <div class={styles.wrapper}>
         <div class={styles.content}>
@@ -18,6 +18,6 @@ export default defineComponent({
           </div>
         </div>
       </div>
-    );
-  },
-});
+    )
+  }
+})
