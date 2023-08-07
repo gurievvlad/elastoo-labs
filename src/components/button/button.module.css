@@ -1,0 +1,38 @@
+.button {
+  display: flex;
+  text-align: center;
+  padding: 6px 24px;
+  border-radius: calc(6px + 1em);
+  border: 1px solid transparent;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.button:focus,
+.button:focus-visible,
+.button:active {
+  outline: none;
+}
+
+.primary {
+  color: #ececec;
+  background: #232323;
+}
+
+.primary:hover {
+  background: #0e0e0e;
+}
+
+.secondary {
+  color: #232323;
+  background: none;
+  border: 2px solid #232323;
+}
+
+.secondary:hover {
+  color: #0e0e0e;
+  border: 2px solid #0e0e0e;
+}

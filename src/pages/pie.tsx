@@ -23,16 +23,13 @@ export default defineComponent({
     })
 
     return () => (
-      <>
-        {store.pie && <Pie
-          id="my-chart-id"
-          data={store.pie}
-          style={{
-            width: '1000px',
-            height: '1000px'
-          }}
-        />}
-      </>
+      store.pie && <Pie
+        data={store.pie}
+        style={{
+          width: '1000px',
+          height: '1000px'
+        }}
+      />
     );
   },
 });

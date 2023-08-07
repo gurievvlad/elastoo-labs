@@ -1,0 +1,24 @@
+.wrapper {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    display: flex;
+    flex-flow: column;
+    width: min(600px, 90%);
+}
+
+.buttons {
+    display: flex;
+    flex-flow: nowrap;
+    gap: 24px;
+}
+
+.title, .text {
+    margin-top: 0;
+    margin-bottom: 24px;
+}

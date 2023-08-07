@@ -36,7 +36,6 @@ export default defineComponent({
     return () => (
       <>
         {store.line && <Line
-          id="my-chart-id"
           options={{
             responsive: true,
           }}
